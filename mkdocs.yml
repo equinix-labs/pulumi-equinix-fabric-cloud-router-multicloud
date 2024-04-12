@@ -11,9 +11,9 @@ nav:
   - Introduction: index.md
 
   - Parts:
-      - 1. Part 1: parts/part1.md
-      - 2. Part 2: parts/part2.md
-      - 3. Part 3: parts/part3.md
+      - 1. Setup: parts/setup.md
+      - 2. Configuration and Provisioning: parts/configuration.md
+      - 3. Infrastructure Overview: parts/infrastructure_overview.md
 
   - Conclusion: parts/conclusion.md
 
