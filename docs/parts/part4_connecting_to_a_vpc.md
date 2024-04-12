@@ -7,58 +7,38 @@ In this part, we will create a new Pulumi Component Resource class to handle the
 
 ### 1. Implementing a new Custom Pulumi Component Resource for VPC attachment
 
-Back to our `aws_dx.py` file, we'll create a new Python class called `DirectConnectVPCAttachment`. This class will encapsulate the logic for setting up Direct Connect to an AWS VPC, including the creation of VPN gateways, customer gateways, VPN connections, and virtual private gateways, and of course the attachment.
+Back to our `aws_dx.py` file, we'll create a new Python class called `DirectConnectVPCAttachment`. This class will encapsulate the logic for setting up Direct Connect to an AWS VPC, including the creation of VPN gateways, gateway route propagation and association.
 
 ```python
-import pulumi
-from pulumi_aws import ec2, directconnect
+# Class to connect Direct Connect Gateway to a VPC
+class AwsDirectConnectVpcAttachment(pulumi.ComponentResource):
 
-class DirectConnectVPCAttachment(pulumi.ComponentResource):
-    def __init__(self, name: str,
-                 vpc_id: pulumi.Input[str],
-                 direct_connect_gateway_id: pulumi.Input[str],
-                 *,
-                 opts: pulumi.ResourceOptions = None):
-        super().__init__('custom:resource:DirectConnectVPCAttachment', name, {}, opts)
+    def __init__(self, name, vpc_id, dx_gateway_id, route_table_id, opts=None):
+        super().__init__('custom:resource:AwsDirectConnectVpcAttachment', name, None, opts)
 
-        # Create a VPN Gateway
-        vpn_gateway = ec2.VpnGateway("vpn-gateway",
-            tags={"Name": "vpn-gateway"},
-            )
-
-        # Attach the VPN Gateway to the VPC
-        vpc_attachment = ec2.VpnGatewayAttachment("vpc-attachment",
+        # Create a new VPN Gateway and attach it to the VPC
+        vpn_gateway = aws.ec2.VpnGateway(f"{name}-vpn-gateway",
             vpc_id=vpc_id,
+            opts=pulumi.ResourceOptions(parent=self)
+        )
+
+        # Automatic route propagation between the VPN gateway and the route table of the VPC
+        aws.ec2.VpnGatewayRoutePropagation(f"{name}-route-propagation",
             vpn_gateway_id=vpn_gateway.id,
-            )
+            route_table_id=route_table_id,
+            opts=pulumi.ResourceOptions(parent=self)
+        )
 
-        # Create a Customer Gateway
-        customer_gateway = ec2.CustomerGateway("customer-gateway",
-            bgp_asn=65000,
-            ip_address="172.31.0.1",
-            tags={"Name": "customer-gateway"},
-            )
+        # Associate the Direct Connect Gateway with the VPN Gateway
+        aws.directconnect.GatewayAssociation(f"{name}-association",
+            dx_gateway_id=dx_gateway_id,
+            associated_gateway_id=vpn_gateway.id,
+            opts=pulumi.ResourceOptions(parent=self)
+        )
 
-        # Create a VPN Connection
-        vpn_connection = ec2.VpnConnection("vpn-connection",
-            customer_gateway_id=customer_gateway.id,
-            vpn_gateway_id=vpn_gateway.id,
-            type="ipsec.1",
-            )
+        # Expose the VPN Gateway ID for other resources to reference
+        self.vpn_gateway_id = vpn_gateway.id
 
-        # Create a Virtual Private Gateway
-        virtual_private_gateway = ec2.VpnGateway("virtual-private-gateway",
-            amazon_side_asn=64512,
-            tags={"Name": "virtual-private-gateway"},
-            )
-
-        # Attach the Virtual Private Gateway to the VPC
-        vpn_gateway_attachment = ec2.VpnGatewayAttachment("vpn-gateway-attachment",
-            vpc_id=vpc_id,
-            vpn_gateway_id=virtual_private_gateway.id,
-            )
-
-        # Register the custom resource with Pulumi state
         self.register_outputs({})
 ```
 
