@@ -9,7 +9,7 @@ In this section, we will add the necessary code to configure BGP (Border Gateway
 
 In this step, we'll configure the direct routing protocol for the AWS connection in the Equinix Fabric side. This protocol specifies the direct routing path for traffic between Equinix Fabric and AWS.
 
-```
+```python
 # Configure BGP in Equinix Fabric side
 aws_routing_protocol_direct = equinix.fabric.RoutingProtocol("AWSRoutingProtocolDirect",
     name="FabricToAWSRoutingProtocolDirect",
@@ -30,7 +30,6 @@ Next, we'll configure the BGP routing protocol for the AWS connection in the Equ
 
 
 ```python
-
 customer_peer_ip = dx_setup.private_vif_amazon_address.apply(lambda s: s.split('/'))[0]
 
 routing_protocol = equinix.fabric.RoutingProtocol("AWSRoutingProtocolBGP",
