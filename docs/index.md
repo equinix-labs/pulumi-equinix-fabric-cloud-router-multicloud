@@ -24,6 +24,11 @@ This workshop is split into four parts:
 | Part | Title | Duration |
 | - | - | - |
 | 1 | [Setup](./parts/setup.md) | 15 minutes |
-| 2 | [Configuration](./parts/configuration.md) | 15 minutes |
-| 3 | [Infrastructure Overview](./parts/infrastructure_overview.md) | 10 minutes |
-| 4 | [Conclusion](./parts/conclusion.md) | 5 minutes |
+| 2 | [Fabric connection to AWS](./parts/part2_fabric_connection_to_aws.md) | 15 minutes |
+| 3 | [Direct Connect configuration](./parts/part3_configuring_direct_connect.md) | 10 minutes |
+| 4 | [Configuring Direct Connect to AWS VPC](./parts/part4_connecting_to_a_vpc.md) | 10 minutes |
+| 5 | [Configuring BGP in Equinix Fabric](./parts/part5_configuring_bgp.md) | 10 minutes |
+| 6 | [Deploying VM Instances in Both Clouds](./parts/part6_deploying_vm_instances.md) | 10 minutes |
+| 7 | [Configuration and Provisioning](./parts/part7_provisioning.md) | 10 minutes |
+| 8 | [Testing Connectivity between GCP and AWS Instances](./parts/part8_testing_interconnection.md) | 10 minutes |
+| 9 | [Conclusion](./parts/conclusion.md) | 5 minutes |

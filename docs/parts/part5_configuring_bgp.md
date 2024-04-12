@@ -1,5 +1,5 @@
 <!-- See https://squidfunk.github.io/mkdocs-material/reference/ -->
-# Part 4: Configuring BGP in Equinix Fabric
+# Part 5: Configuring BGP in Equinix Fabric
 
 In this section, we will add the necessary code to configure BGP (Border Gateway Protocol) in the Equinix Fabric side. This configuration will establish the routing protocol for directing traffic between Equinix Fabric and AWS.
 

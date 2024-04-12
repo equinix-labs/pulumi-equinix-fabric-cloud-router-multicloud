@@ -1,16 +1,18 @@
 <!-- See https://squidfunk.github.io/mkdocs-material/reference/ -->
 # Conclusion
 
-Thank you for participating in the workshop! Let's recap some of the key takeways that we've learned:
+Congratulations on completing this workshop! Let's recap some of the key takeways that we've learned:
 
-* We have explored how to provision Equinix infrastructure using Pulumi, harnessing its flexibility and power
-* We've learned how to overcome limitations in providers by integrating with external APIs and SDKs, thereby extending the automation capabilities of Pulumi.
-* Additionally, we've highlighted that while this example utilizes Python, similar outcomes can be achieved with any of the other supported languages (Java, .NET, TypeScript, Go).
-* By embracing tools like Pulumi, we empower ourselves to streamline and automate our infrastructure deployment processes efficiently.
+* We've expanded our expertise by integrating AWS into our infrastructure provisioning workflow alongside Equinix Fabric using Pulumi. This integration showcases the versatility and power of Pulumi in orchestrating multi-cloud environments.
+* Through the creation of a multicloud environment utilizing Fabric Cloud Router, we've demonstrated the seamless connectivity between Google Cloud Platform (GCP) and Amazon Web Services (AWS), illustrating the potential for interconnected architectures across different cloud providers.
+* By automating the end-to-end deployment process using Pulumi, we've enhanced our infrastructure deployment efficiency and reliability, laying the groundwork for scalable and repeatable infrastructure management practices.
 
 ## Next Steps
 
-* As a next step, we encourage exploring the integration of Equinix Fabric Cloud Router with other cloud service providers to further unlock its potential. By adding interconnections to additional cloud environments, such as Microsoft Azure or Amazon Web Services (AWS), you can evaluate the agility and efficiency of Equinix Fabric in facilitating cross-cloud traffic routing without the need for additional configuration.
+As you continue your journey, consider exploring further possibilities with Pulumi and multicloud architectures. Here are some suggested next steps:
+
+* Experiment with additional cloud providers and services to extend your multicloud environment. Integrate platforms like Microsoft Azure or other Equinix Fabric-supported clouds to diversify your infrastructure.
+* Dive deeper into Pulumi's features and capabilities, exploring advanced deployment strategies, infrastructure as code best practices, and leveraging Pulumi's extensive ecosystem of libraries and integrations.
 
 ## Resources
 
