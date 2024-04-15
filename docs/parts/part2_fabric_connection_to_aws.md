@@ -1,7 +1,7 @@
 <!-- See https://squidfunk.github.io/mkdocs-material/reference/ -->
 # Part 2: Fabric connection to AWS
 
-In this section, we'll start by configuring the connection from Equinix Fabric to AWS. fFor now, we'll add the code in the `__main__.py` file, although later on, we'll separate some logic into other files for better readability and maintenance.
+In this section, we'll start by configuring the connection from Equinix Fabric to AWS. For now, we'll add the code in the `__main__.py` file, although later on, we'll separate some logic into other files for better readability and maintenance.
 
 ## Steps
 
