@@ -16,7 +16,7 @@ As you continue your journey, consider exploring further possibilities with Pulu
 
 ## Resources
 
-Here are a few other resources to look at to continue your Equinix Fabric journey:
+Here are a few other resources to look at to continue your Equinix platform journey:
 
 * [Deploy @ Equinix](https://deploy.equinix.com): A one-stop shop for blogs, guides, and plenty of other resources.
 * [Equinix Fabric Docs](https://docs.equinix.com/en-us/Content/Interconnection/Fabric/Fabric-landing-main.htm): Equinix Fabric official documentation.
