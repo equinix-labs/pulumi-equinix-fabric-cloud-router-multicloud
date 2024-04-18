@@ -1,7 +1,7 @@
-site_name: "Workshop: Equinix Labs"
+site_name: "Workshop: Pulumi Equinix Fabric Cloud Router"
 
-repo_url: https://github.com/equinix-labs/equinix-labs-workshop
-repo_name: equinix-labs/equinix-labs-workshop
+repo_url: https://github.com/equinix-labs/pulumi-equinix-fabric-cloud-router-multicloud-workshop
+repo_name: equinix-labs/pulumi-equinix-fabric-cloud-router-multicloud-workshop
 edit_uri: blob/main/docs
 
 extra_css:
@@ -11,9 +11,14 @@ nav:
   - Introduction: index.md
 
   - Parts:
-      - 1. Part 1: parts/part1.md
-      - 2. Part 2: parts/part2.md
-      - 3. Part 3: parts/part3.md
+      - 1. Setup: parts/part1_setup.md
+      - 2. Fabric connection to AWS: parts/part2_fabric_connection_to_aws.md
+      - 3. Direct Connect configuration: parts/part3_configuring_direct_connect.md
+      - 4. Configuring Direct Connect to AWS VPC: parts/part4_connecting_to_a_vpc.md
+      - 5. Configuring BGP in Equinix Fabric: parts/part5_configuring_bgp.md
+      - 6. IDeploying VM Instances in Both Clouds: parts/part6_deploying_vm_instances.md
+      - 7. Configuration and Provisioning: parts/part7_provisioning.md
+      - 8. Testing Connectivity between GCP and AWS Instances: parts/part8_testing_interconnection.md
 
   - Conclusion: parts/conclusion.md
 
