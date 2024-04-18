@@ -16,7 +16,7 @@ nav:
       - 3. Direct Connect configuration: parts/part3_configuring_direct_connect.md
       - 4. Configuring Direct Connect to AWS VPC: parts/part4_connecting_to_a_vpc.md
       - 5. Configuring BGP in Equinix Fabric: parts/part5_configuring_bgp.md
-      - 6. IDeploying VM Instances in Both Clouds: parts/part6_deploying_vm_instances.md
+      - 6. Deploying VM Instances in Both Clouds: parts/part6_deploying_vm_instances.md
       - 7. Configuration and Provisioning: parts/part7_provisioning.md
       - 8. Testing Connectivity between GCP and AWS Instances: parts/part8_testing_interconnection.md
 
