@@ -23,7 +23,7 @@ This workshop is split into four parts:
 
 | Part | Title | Duration |
 | - | - | - |
-| 1 | [Setup](./parts/setup.md) | 15 minutes |
+| 1 | [Setup](./parts/part1_setup.md) | 15 minutes |
 | 2 | [Fabric connection to AWS](./parts/part2_fabric_connection_to_aws.md) | 15 minutes |
 | 3 | [Direct Connect configuration](./parts/part3_configuring_direct_connect.md) | 10 minutes |
 | 4 | [Configuring Direct Connect to AWS VPC](./parts/part4_connecting_to_a_vpc.md) | 10 minutes |
