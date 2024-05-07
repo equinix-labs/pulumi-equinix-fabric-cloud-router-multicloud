@@ -27,7 +27,7 @@ In addition to the setup steps from the previous workshop, you'll also need to c
 
 Furthermore, ensure you have the AWS dependency installed by adding it to the `requirements.txt` file:
 
-```plaintext
+```
 pulumi_aws>=6.29.0
 ```
 
