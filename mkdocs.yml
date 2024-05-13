@@ -1,4 +1,4 @@
-site_name: "Workshop: Pulumi Equinix Fabric Cloud Router"
+site_name: "Workshop: Equinix Fabric Cloud Router (FCR) Multi-cloud with Pulumi"
 
 repo_url: https://github.com/equinix-labs/pulumi-equinix-fabric-cloud-router-multicloud-workshop
 repo_name: equinix-labs/pulumi-equinix-fabric-cloud-router-multicloud-workshop
